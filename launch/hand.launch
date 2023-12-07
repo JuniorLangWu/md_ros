@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+
+  <!-- Start mediapipe and ros wrapper -->
+  <node pkg="md_ros" type="hand.py" name="hand_ros" output="screen" >
+    <!-- param name="image_topic"       value="/rgb/image_raw" / -->
+    <param name="image_topic"       value="/camera/color/image_raw" />
+    <param name="depth_topic"       value="/camera/aligned_depth_to_color/image_raw" />
+    <param name="visualize"       value="true"/>
+
+  </node>
+
+</launch>
